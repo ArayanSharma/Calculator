@@ -10,34 +10,38 @@
 <link rel="stylesheet" href="cal.css">
 </head>
 <body>
-    <div class="calculator">
-        <div class="display" id="display">0</div>
-        <div class="buttons">
-            <button class="clear" onclick="clearDisplay()">C</button>
-            <button onclick="deleteLast()">←</button>
-            <button class="operator" onclick="appendOperator('/')">÷</button>
-            <button class="operator" onclick="appendOperator('*')">×</button>
-            
-            <button onclick="appendNumber('7')">7</button>
-            <button onclick="appendNumber('8')">8</button>
-            <button onclick="appendNumber('9')">9</button>
-            <button class="operator" onclick="appendOperator('-')">−</button>
-            
-            <button onclick="appendNumber('4')">4</button>
-            <button onclick="appendNumber('5')">5</button>
-            <button onclick="appendNumber('6')">6</button>
-            <button class="operator" onclick="appendOperator('+')">+</button>
-            
-            <button onclick="appendNumber('1')">1</button>
-            <button onclick="appendNumber('2')">2</button>
-            <button onclick="appendNumber('3')">3</button>
-            <button onclick="appendDecimal()">.</button>
-            
-            <button class="zero" onclick="appendNumber('0')">0</button>
-            <button class="equals" onclick="calculate()">=</button>
-        </div>
-    </div>
-
+<table>
+<input type="text" id="result">
+<tr class="b">
+  <td><input type="button" value="+" onclick="dis('+')"></td>
+  <td><input type="button" value="-" onclick="dis('-')"></td>
+  <td><input type="button" value="&times" onclick="dis('*')"></td>
+  <td><input type="button" value="&divide" onclick="dis('/')"></td>
+</tr>
+  <tr class="b">
+  <td><input type="button" value="7" onclick="dis('7')"></td>
+  <td><input type="button" value="8" onclick="dis('8')"></td>
+  <td><input type="button" value="9" onclick="dis('9')"></td>
+<td><input type="button" value="=" onclick="solve()" class="a"></td>
+  </tr>
+  <tr class="b">
+  <td><input type="button" value="4" onclick="dis('4')"></td>
+  <td><input type="button" value="5" onclick="dis('5')"></td>
+  <td><input type="button" value="6" onclick="dis('6')"></td>
+  </tr>
+<tr class="b">
+  <td><input type="button" value="1" onclick="dis('1')"></td>
+  <td><input type="button" value="2" onclick="dis('2')"></td>
+  <td><input type="button" value="3" onclick="dis('3')"></td>
+  </tr>
+<tr class="b">
+  <td><input type="button" value="." onclick="dis('0')"></td>
+  <td><input type="button" value="0" onclick="dis('.')"></td>
+  <td><input type="button" value="C" onclick="clear()" ></td>
+  
+</tr>
+</table>
    <script src="cal.js"></script>
 </body>
+
 </html>
